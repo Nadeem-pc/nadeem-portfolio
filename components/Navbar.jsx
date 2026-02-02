@@ -13,13 +13,16 @@ export default function Navbar() {
         sideMenuRef.current.style.transform = 'translateX(16rem)';
     }
     const toggleTheme = () => {
+        const root = document.documentElement;
 
-        document.documentElement.classList.toggle('dark');
-
-        if (document.documentElement.classList.contains('dark')) {
-            localStorage.theme = 'dark';
-        } else {
+        if (root.classList.contains('dark')) {
+            root.classList.remove('dark');
             localStorage.theme = 'light';
+            document.cookie = 'theme=light; path=/; max-age=31536000';
+        } else {
+            root.classList.add('dark');
+            localStorage.theme = 'dark';
+            document.cookie = 'theme=dark; path=/; max-age=31536000';
         }
     }
 
@@ -35,12 +38,10 @@ export default function Navbar() {
             }
         })
 
-        // -------- light mode and dark mode -----------
-
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
+        if (document.documentElement.classList.contains('dark')) {
+            localStorage.theme = 'dark';
         } else {
-            document.documentElement.classList.remove('dark')
+            localStorage.theme = 'light';
         }
     }, [])
 
@@ -83,7 +84,7 @@ export default function Navbar() {
 
                 </div>
                 {/* -- ----- mobile menu ------  -- */}
-                <ul ref={sideMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+                <ul ref={sideMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkTheme dark:text-white">
 
                     <div className="absolute right-6 top-6" onClick={closeMenu}>
                         <img src="/assets/icons/close-black.png" alt="" className="w-5 cursor-pointer dark:hidden" />
