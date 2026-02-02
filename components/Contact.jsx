@@ -1,30 +1,27 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
     const [result, setResult] = useState("");
+    const formRef = useRef(null);
     const onSubmit = async (event) => {
         event.preventDefault();
         setResult("Sending....");
-        const formData = new FormData(event.target);
 
-        // ----- Enter your Web3 Forms Access key below---------
+        try {
+            await emailjs.sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                formRef.current,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+            );
 
-        formData.append("access_key", "--- enter your access key here-------");
-
-        const res = {success:true}
-        // const res = await fetch("https://api.web3forms.com/submit", {
-        //     method: "POST",
-        //     body: formData
-        // }).then((res) => res.json());
-
-        if (res.success) {
-            console.log("Success", res);
-            setResult(res.message);
+            setResult("Thank you! Your message has been sent.");
             event.target.reset();
-        } else {
-            console.log("Error", res);
-            setResult(res.message);
+        } catch (error) {
+            console.error("EmailJS error", error);
+            setResult("Something went wrong. Please try again.");
         }
     };
 
@@ -34,7 +31,7 @@ export default function Contact() {
             <h2 className="text-center text-5xl font-Ovo">Get in touch</h2>
             <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I&apos;d love to hear from you! If you have any questions, comments or feedback, please use the form below.</p>
 
-            <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
+            <form onSubmit={onSubmit} ref={formRef} className="max-w-2xl mx-auto">
 
                 <input type="hidden" name="subject" value="Eliana Jade - New form Submission" />
 
@@ -48,7 +45,7 @@ export default function Contact() {
                 Submit now
                     <img src="/assets/icons/right-arrow-white.png" alt="" className="w-4" />
                 </button>
-                <p className='mt-4'>{result}</p>
+                <p className='mt-6 text-center'>{result}</p>
             </form>
         </div>
     )
