@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
     return (
@@ -31,7 +32,7 @@ export default function Footer() {
                     <ul className="flex items-center gap-4">
                         <li>
                             <a
-                                href="#!" // TODO: replace with your GitHub URL
+                                href="https://github.com/Nadeem-pc" 
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label="GitHub"
@@ -42,7 +43,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <a
-                                href="#!" // TODO: replace with your LinkedIn URL
+                                href="https://www.linkedin.com/in/nadeempc/" 
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label="LinkedIn"
@@ -53,13 +54,24 @@ export default function Footer() {
                         </li>
                         <li>
                             <a
-                                href="#!" // TODO: replace with your Twitter / X URL
+                                href="https://www.instagram.com/i.nadeeem/" 
                                 target="_blank"
                                 rel="noreferrer"
-                                aria-label="Twitter"
+                                aria-label="Instagram"
                                 className="w-9 h-9 rounded-full border border-gray-300 dark:border-white/30 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-darkHover transition"
                             >
-                                <FaTwitter className="w-4 h-4" />
+                                <FaInstagram className="w-4 h-4" />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://x.com/nadeeempc" 
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="X (Twitter)"
+                                className="w-9 h-9 rounded-full border border-gray-300 dark:border-white/30 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-darkHover transition"
+                            >
+                                <FaXTwitter className="w-4 h-4" />
                             </a>
                         </li>
                     </ul>
