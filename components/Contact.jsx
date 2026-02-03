@@ -29,13 +29,13 @@ export default function Contact() {
         <div id="contact" className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/assets/icons/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
 
             <h2 className="text-center text-5xl font-Ovo">Get in touch</h2>
-            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I&apos;d love to hear from you! If you have any questions, comments or feedback, please use the form below.</p>
+            {/* <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I&apos;d love to hear from you! If you have any questions, comments or feedback, please use the form below.</p> */}
 
             <form onSubmit={onSubmit} ref={formRef} className="max-w-2xl mx-auto">
 
                 <input type="hidden" name="subject" value="Eliana Jade - New form Submission" />
 
-                <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
+                <div className="grid grid-cols-auto gap-6 mt-14 mb-8">
                     <input type="text" placeholder="Enter your name" className="flex-1 px-3 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white dark:bg-darkTheme" required name="name" />
 
                     <input type="email" placeholder="Enter your email" className="flex-1 px-3 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white dark:bg-darkTheme" required name="email" />
