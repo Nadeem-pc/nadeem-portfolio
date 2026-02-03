@@ -30,6 +30,7 @@ import {
     SiShadcnui,
     SiJsonwebtokens,
     SiRazorpay,
+    SiWebrtc,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { DiVisualstudio } from "react-icons/di";
@@ -45,16 +46,17 @@ export default function skills() {
         { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
         { name: "React.js", icon: SiReact, color: "text-blue-400" },
         { name: "Redux", icon: SiRedux, color: "text-purple-500" },
-        { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+        { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
         { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
         // { name: "Bootstrap", icon: SiBootstrap, color: "text-purple-500" },
-        { name: "shadcn/ui", icon: SiShadcnui, color: "text-pink-500" },
+        { name: "shadcn/ui", icon: SiShadcnui, color: "text-black dark:text-white" },
 
         // ===== Backend =====
         { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
         { name: "Express.js", icon: SiExpress, color: "text-gray-400" },
-        { name: "JWT", icon: SiJsonwebtokens, color: "text-yellow-400" }, 
+        { name: "JWT", icon: SiJsonwebtokens, color: "text-blue-600" }, 
         { name: "Socket.IO", icon: SiSocketdotio, color: "text-foreground" },
+        { name: "WebRTC", icon: SiWebrtc, color: "text-sky-500" },
 
         // ===== Databases =====
         { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
@@ -78,7 +80,7 @@ export default function skills() {
 
         // ===== Tools & Workflow =====
         { name: "Git", icon: SiGit, color: "text-orange-600" },
-        { name: "GitHub", icon: SiGithub, color: "text-foreground" },
+        // { name: "GitHub", icon: SiGithub, color: "text-foreground" },
         // { name: "Postman", icon: SiPostman, color: "text-orange-500" },
         // { name: "VS Code", icon: DiVisualstudio, color: "text-blue-500" },
         { name: "Figma", icon: SiFigma, color: "text-pink-500" },
