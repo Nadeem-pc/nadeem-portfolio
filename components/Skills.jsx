@@ -81,7 +81,7 @@ export default function skills() {
         // ===== Tools & Workflow =====
         { name: "Git", icon: SiGit, color: "text-orange-600" },
         // { name: "GitHub", icon: SiGithub, color: "text-foreground" },
-        // { name: "Postman", icon: SiPostman, color: "text-orange-500" },
+        { name: "Postman", icon: SiPostman, color: "text-orange-500" },
         // { name: "VS Code", icon: DiVisualstudio, color: "text-blue-500" },
         { name: "Figma", icon: SiFigma, color: "text-pink-500" },
     ];
@@ -92,19 +92,20 @@ export default function skills() {
 
             <div className="grid grid-cols-auto gap-6 my-16">
 
-                <ul className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+                <ul className="grid grid-cols-4 gap-3 px-2 justify-items-stretch sm:grid-cols-none sm:px-0 sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:gap-6">
                     {skills.map((skill) => {
                         const Icon = skill.icon;
+                        const isPostman = skill.name === "Postman";
                         return (
                             <li
                                 key={skill.name}
-                                className="flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 gap-1"
+                                className={`flex flex-col items-center justify-center w-full h-20 sm:w-24 sm:h-24 border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 gap-2 px-1${isPostman ? " lg:hidden" : ""}`}
                             >
                                 <Icon
                                     className={`w-5 h-5 sm:w-7 sm:h-7 ${skill.color ?? ""}`}
                                     aria-label={skill.name}
                                 />
-                                <span className="text-xs text-gray-500 dark:text-white/70 capitalize">
+                                <span className="text-[10.5px] sm:text-xs leading-tight text-gray-500 dark:text-white/70 text-center">
                                     {skill.name}
                                 </span>
                             </li>
