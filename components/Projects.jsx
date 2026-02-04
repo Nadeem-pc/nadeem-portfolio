@@ -56,27 +56,6 @@ export default function Projects() {
     };
     const projects = [
         {
-            name: 'UrbanDot',
-            image: '/assets/images/urbandot.jpeg',
-            image2: '/assets/images/urbandot-2.png',
-            tagline: 'E-commerce Platform',
-            title: 'UrbanDot – Men’s fashion e-commerce platform',
-            titleLines: ['UrbanDot – Men’s fashion', 'e-commerce platform'],
-            description:
-                'UrbanDot is a full-stack men’s fashion e-commerce platform built with a scalable backend architecture, focused on real-world commerce workflows. It emphasizes performance, security, and clean REST APIs, supported by reliable database design and admin tooling.',
-            features: [
-                'OTP-based authentication with secure user sessions.',
-                'Advanced product search, filtering, and wishlist.',
-                'Cart, checkout, order lifecycle, and return handling.',
-                'Secure Razorpay payments with wallet functionality.',
-                'Admin dashboard for managing products, users, orders, and coupons, with integrated sales analytics, inventory management, and downloadable reports.'
-            ],
-            techStack: ['JavaScript', 'EJS', 'Bootstrap', 'Node.js', 'Express.js', 'MongoDB', 'Razorpay', 'Nodemailer', 'MVC Architecture'],
-            liveUrl: '#',
-            sourceUrl: 'https://github.com/Nadeem-pc/UrbanDot-ecommerce',
-        },
-
-        {
             name: 'Mentora',
             image: '/assets/images/mentora.jpeg',
             image2: '/assets/images/mentora-2.jpeg',
@@ -99,7 +78,7 @@ export default function Projects() {
             liveUrl: '#',
             sourceUrl: 'https://github.com/Nadeem-pc/mentora-mental-health-platform',
         },
-
+        
         {
             name: 'ServiceLink',
             image: '/assets/images/servicelink.jpeg',
@@ -107,7 +86,7 @@ export default function Projects() {
             tagline: 'Local Service Provider Platform',
             title: 'ServiceLink – Local service provider Listing platform',
             description:
-                'ServiceLink is a full-stack local service provider listing platform that helps users discover and contact trusted professionals such as electricians and plumbers. It enables users to explore providers based on key details like location, pricing, and reviews. Developed collaboratively as a team using Git-based workflows.',
+            'ServiceLink is a full-stack local service provider listing platform that helps users discover and contact trusted professionals such as electricians and plumbers. It enables users to explore providers based on key details like location, pricing, and reviews. Developed collaboratively as a team using Git-based workflows.',
             features: [
                 'Secure JWT authentication with OTP verification and role-based access.',
                 'Users can select and directly contact service providers based on service type, location, pricing, ratings, reviews, and experience.',
@@ -117,6 +96,27 @@ export default function Projects() {
             techStack: ['TypeScript', 'React.js', 'Axios', 'Tailwind CSS', 'Node.js', 'Express.js', 'Zod', 'JWT', 'MongoDB', 'Redis', 'Stripe', 'Nodemailer', 'Repository Pattern'],
             liveUrl: '#',
             sourceUrl: 'https://github.com/Razirasheed03/servicelink-platform',
+        },
+
+        {
+            name: 'UrbanDot',
+            image: '/assets/images/urbandot.jpeg',
+            image2: '/assets/images/urbandot-2.png',
+            tagline: 'E-commerce Platform',
+            title: 'UrbanDot – Men’s fashion e-commerce platform',
+            titleLines: ['UrbanDot – Men’s fashion', 'e-commerce platform'],
+            description:
+                'UrbanDot is a full-stack men’s fashion e-commerce platform built with a scalable backend architecture, focused on real-world commerce workflows. It emphasizes performance, security, and clean REST APIs, supported by reliable database design and admin tooling.',
+            features: [
+                'OTP-based authentication with secure user sessions.',
+                'Advanced product search, filtering, and wishlist.',
+                'Cart, checkout, order lifecycle, and return handling.',
+                'Secure Razorpay payments with wallet functionality.',
+                'Admin dashboard for managing products, users, orders, and coupons, with integrated sales analytics, inventory management, and downloadable reports.'
+            ],
+            techStack: ['JavaScript', 'EJS', 'Bootstrap', 'Node.js', 'Express.js', 'MongoDB', 'Razorpay', 'Nodemailer', 'MVC Architecture'],
+            liveUrl: '#',
+            sourceUrl: 'https://github.com/Nadeem-pc/UrbanDot-ecommerce',
         },
     ];
 
@@ -199,7 +199,7 @@ export default function Projects() {
                                 />
 
                                 <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
-                                    {selectedProject.liveUrl && (
+                                    {/* {selectedProject.liveUrl && (
                                         <a
                                             href={selectedProject.liveUrl}
                                             target="_blank"
@@ -209,7 +209,7 @@ export default function Projects() {
                                             <FaExternalLinkAlt className="w-4 h-4" />
                                             <span>View Live</span>
                                         </a>
-                                    )}
+                                    )} */}
                                     {selectedProject.sourceUrl && (
                                         <a
                                             href={selectedProject.sourceUrl}
