@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
 
 export default function Footer() {
     return (
@@ -54,13 +55,13 @@ export default function Footer() {
                         </li>
                         <li>
                             <a
-                                href="https://www.instagram.com/i.nadeeem/" 
+                                href="https://leetcode.com/u/NadeemMohammed" 
                                 target="_blank"
                                 rel="noreferrer"
-                                aria-label="Instagram"
+                                aria-label="LeetCode"
                                 className="w-9 h-9 rounded-full border border-gray-300 dark:border-white/30 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-darkHover transition"
                             >
-                                <FaInstagram className="w-4 h-4" />
+                                <SiLeetcode className="w-4 h-4" />
                             </a>
                         </li>
                         <li>
@@ -72,6 +73,17 @@ export default function Footer() {
                                 className="w-9 h-9 rounded-full border border-gray-300 dark:border-white/30 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-darkHover transition"
                             >
                                 <FaXTwitter className="w-4 h-4" />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.instagram.com/i.nadeeem" 
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Instagram"
+                                className="w-9 h-9 rounded-full border border-gray-300 dark:border-white/30 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-darkHover transition"
+                            >
+                                <FaInstagram className="w-4 h-4" />
                             </a>
                         </li>
                     </ul>
