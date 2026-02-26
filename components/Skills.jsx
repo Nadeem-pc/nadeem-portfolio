@@ -66,7 +66,7 @@ export default function skills() {
 
         // ===== Cloud & DevOps =====
         { name: "AWS", icon: FaAws, color: "text-orange-500" },
-        // { name: "Docker", icon: SiDocker, color: "text-sky-400" },
+        { name: "Docker", icon: SiDocker, color: "text-sky-400" },
         { name: "Nginx", icon: SiNginx, color: "text-green-500" },
 
         // ===== Deployment & Platforms =====
@@ -76,7 +76,7 @@ export default function skills() {
         // ===== Integrations =====
         { name: "Stripe", icon: SiStripe, color: "text-indigo-500" },
         { name: "Razorpay", icon: SiRazorpay, color: "text-blue-500" },
-        { name: "Cloudinary", icon: SiCloudinary, color: "text-blue-400" },
+        // { name: "Cloudinary", icon: SiCloudinary, color: "text-blue-400" },
 
         // ===== Tools & Workflow =====
         { name: "Git", icon: SiGit, color: "text-orange-600" },
